@@ -1,0 +1,135 @@
+:root {
+  --bg: #f7f9fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--bg);
+}
+
+.App {
+  min-height: 100vh;
+}
+
+.header,
+.footer {
+  text-align: center;
+  padding: 1rem;
+}
+
+.sub {
+  margin-top: -0.25rem;
+  color: var(--muted);
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto auto auto;
+  gap: 0.5rem;
+  align-items: center;
+  background: var(--card);
+  padding: 0.75rem;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.controls label {
+  color: var(--muted);
+}
+
+.controls select {
+  padding: 0.4rem 0.6rem;
+}
+
+.btn {
+  border: 0;
+  padding: 0.6rem 0.9rem;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #e5e7eb;
+}
+
+.btn.primary {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.btn.success {
+  background: #059669;
+  color: #ffffff;
+}
+
+.btn.danger {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.stage {
+  margin-top: 1rem;
+  background: var(--card);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 0.75rem;
+  display: grid;
+  gap: 0.5rem;
+  justify-items: center;
+}
+
+.stage img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #0f172a;
+}
+
+.caption {
+  color: var(--muted);
+}
+
+.thumbs {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+}
+
+.thumb {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.thumb.active {
+  border-color: #2563eb;
+  opacity: 1;
+}
+
+.status pre {
+  white-space: pre-wrap;
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 0.75rem;
+  border-radius: 12px;
+  margin-top: 1rem;
+  overflow: auto;
+}
